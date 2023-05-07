@@ -1,15 +1,15 @@
 ---
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['′,′'],['\\(','\\)']]} }); </script> <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 layout:     post
 title:      Data Structrue Exercise
 subtitle:    "\"Exercise After Class\""
 date:       2023-05-07
 author:     Rorschach
 catalog: true
+mathJax: true
 tags:
     - DataStructrue 
-mathJax: true
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['′,′'],['\\(','\\)']]} }); </script> <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 
 
 ---
