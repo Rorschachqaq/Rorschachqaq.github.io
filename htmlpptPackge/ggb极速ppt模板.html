@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name=viewport content="width=device-width,initial-scale=1">
+		<script src="./kz16lib/geogebra/deployggb.js"></script>
+		<script src="./kz16lib/FileSaver.js/FileSaver.js"></script>
+		<script>
+		var bb = true;
+		var ggbs=new Array();
+		ggbs[0] = "";
+		</script>
+	</head>
+
+	<body>
+		<center><div id="ggbApplet" ></div></center>
+		<div align="center" id="bt">
+				<a href="javascript:saveGgbFile()" >保存ggbBase64</a>
+				<a href="javascript:loadGgbFile()">导入ggbBase64</a>
+				<textarea name="Base64" id="Base64" cols=20 rows=1 style="resize:none;"></textarea>
+				&nbsp; 
+				<a href="javascript:savePPT()">导出</a>
+				<label><input type="checkbox" name="kkk" value="true"></label>
+				<textarea name="filename" id="filename" cols=8 rows=1 style="resize:none;">ggbppt</textarea>
+				.html &nbsp; 
+				<a href="javascript:DeletePage()">删页</a>
+				<a href="javascript:AddPage()">加页</a>
+				<a href="javascript:First()">首页</a>
+				<a href="javascript:Previous()">上页</a>
+				<a href="javascript:SetPage()">跳转</a>
+				<textarea name="Cpages" id="Cpages" cols=1 rows=1 style="resize:none; border-style:none;overflow:hidden;width:18px; text-align:right">1</textarea>
+				/
+				<textarea name="tolpages" id="tolpages" cols=1 rows=1 style="resize:none; border-style:none;overflow:hidden;width:18px"></textarea>
+				<a href="javascript:Next()">下页</a>
+				<a href="javascript:Last()">尾页</a>
+		</div>
+		<script src="kz16lib/pptggb.js"></script>
+	</body>
+</html>
