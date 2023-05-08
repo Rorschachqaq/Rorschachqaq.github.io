@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<script src="deployggb.js"></script>
+
+<script>
+var width = 600;   
+var height = 600;
+var ggb1 = "";
+var ggb2 = "";
+var parameters1 = {
+"id": "ggbApplet1",
+"width":width,
+"height":height, 
+"autoHeight":true,
+"showMenuBar":true,  
+"showAlgebraInput":true,
+"showToolBar":true,
+"ggbBase64": ggb1,
+"language": "zh",
+};
+var applet1 = new GGBApplet(parameters1, '5.0');
+applet1.setHTML5Codebase('5.0/web3d/');
+var parameters2 = {
+"id": "ggbApplet2",
+"width":width,
+"height":height, 
+"autoHeight":true,
+"showMenuBar":true,  
+"showAlgebraInput":true,
+"showToolBar":true,
+"ggbBase64": ggb2,
+"language": "en",
+};
+var applet2 = new GGBApplet(parameters2, '5.0');
+applet2.setHTML5Codebase('5.0/web3d/');
+window.onload = function() {applet1.inject('ggbApplet1'); applet2.inject('ggbApplet2')};
+
+
+
+function saveGgbFile(){ 
+    ggbApplet1.getBase64(function(b){
+        document.getElementById("Base64").value = b;
+        document.getElementById("Base64").select();
+        document.execCommand("copy");
+    }); 
+}
+function loadGgbFile(){ ggbApplet1.setBase64(document.getElementById("Base64").value); }
+function saveGgbBase(){ 
+    ggbApplet1.getBase64(function(b){
+        var bbb = b;
+    }); 
+}
+function restart(){ 
+    saveGgbFile();
+    ggbApplet1.setBase64(ggb1);
+}
+function fresh(){ 
+    saveGgbBase();
+    ggbApplet1.setBase64(ggbApplet1.getBase64());
+}
+function synchronize(){ 
+    saveGgbBase();
+    ggbApplet2.setBase64(ggbApplet1.getBase64());
+}
+
+function saveGgbFile2(){ 
+    ggbApplet2.getBase64(function(b){
+        document.getElementById("Base642").value = b;
+        document.getElementById("Base642").select();
+        document.execCommand("copy");
+    }); 
+}
+function loadGgbFile2(){ ggbApplet2.setBase64(document.getElementById("Base642").value); }
+function saveGgbBase2(){ 
+    ggbApplet2.getBase64(function(b){
+        var bbb = b;
+    }); 
+}
+function restart2(){ 
+    saveGgbFile2();
+    ggbApplet2.setBase64(ggb2);
+}
+function fresh2(){ 
+    saveGgbBase2();
+    ggbApplet2.setBase64(ggbApplet2.getBase64());
+}
+function synchronize2(){ 
+    saveGgbBase2();
+    ggbApplet1.setBase64(ggbApplet2.getBase64());
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+<center>
+        <p>
+                <a href="javascript:synchronize()" border='1' >同步</a>
+                <a href="javascript:restart()" border='1' >清除重启</a>
+                <a href="javascript:fresh()" border='1' >当前刷新</a>
+                <a href="javascript:saveGgbFile()" border='1' >保存ggbBase64</a>
+                <a href="javascript:loadGgbFile()">导入ggbBase64</a>
+                <textarea name="Base64" id="Base64" cols=10 rows=1 style="resize:none;"></textarea>
+            
+                <a href="javascript:restart2()" border='1' >清除重启</a>
+                <a href="javascript:fresh2()" border='1'>当前刷新</a>
+                <a href="javascript:saveGgbFile2()" border='1' >保存ggbBase64</a>
+                <a href="javascript:loadGgbFile2()">导入ggbBase64</a>
+                <textarea name="Base642" id="Base642" cols=10 rows=1 style="resize:none;"></textarea>
+                <a href="javascript:synchronize2()" border='1' >同步</a>
+            </p>
+        <div style="display:inline-block" id="ggbApplet1"></div>
+        <div style="display:inline-block" id="ggbApplet2"></div>
+</center>
+</body>
+</html>

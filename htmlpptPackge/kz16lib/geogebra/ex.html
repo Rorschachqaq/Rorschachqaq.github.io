@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<title>ggb小窗口</title>
+
+
+<!-- 下面的一大段代码和geogebra相关 -->
+<!-- <script src="https://cdn.geogebra.org/apps/deployggb.js"></script> -->
+<script src="deployggb.js"></script>
+<script>
+// 函数ggbOnInit与函数setLargeLabel是设置公式字体的
+function ggbOnInit(param) {
+	if (param == "ggbApplet") {
+        ggbApplet.registerAddListener("setLargeLabel");
+	}
+}
+function setLargeLabel(objName){
+    ggbApplet.setCaption(objName,"$\\large{%n}$");
+    ggbApplet.setLabelStyle(objName, 3);
+}
+
+var parameters = {
+"id": "ggbApplet",
+"width":700,
+"height":500,
+"autoHeight":true,
+"useBrowserForJS":true,  
+"enableLabelDrags":true,
+"enableShiftDragZoom":true,
+"enableRightClick":true,
+"showMenuBar":true,  
+"showAlgebraInput":true,
+"showToolBar":true,
+"showFullscreenButton":false,
+"disableAutoScale":true,
+  //"borderColor":"white",  //去掉外边框颜色
+// api.evalCommand的命令也是可以写代码的， for循环可以合理利用起来
+"language":"en",
+"ggbBase64":"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"
+};
+var applet = new GGBApplet(parameters, '5.0');
+// 离线则下行代码取消注释，注意路径
+applet.setHTML5Codebase('5.0/web3d/');
+window.onload = function() {applet.inject('ggbApplet')};
+function saveGgbFile(){ 
+    ggbApplet.getBase64(function(b){
+        document.getElementById("Base64").value = b;
+        document.getElementById("Base64").select();
+        document.execCommand("copy");
+    }); 
+}
+function loadGgbFile(){ ggbApplet.setBase64(document.getElementById("Base64").value); }
+</script>
+
+
+</head>
+
+
+<body>
+<center>
+<div id="ggbApplet"></div>
+<p>
+<a href="javascript:saveGgbFile()" border='1' >点我保存</a>
+&nbsp; 
+<a href="javascript:loadGgbFile()">点我导入</a>
+<textarea name="Base64" id="Base64" cols=50 rows=1></textarea>
+</p>
+</center>
+</body>
+</html>
