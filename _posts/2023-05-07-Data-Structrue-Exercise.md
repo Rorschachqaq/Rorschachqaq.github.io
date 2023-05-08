@@ -279,7 +279,7 @@ void Josephu(int N, int i, int m)
 
 ## 第三章 栈和队列
 
-### 栈
+### --栈
 
 **1.字符a, b, c, d依次通过一个栈, 按出栈的先后次序组成字符串, 至多可以组成多少个不同的字符串? 并分别写出它们**
 
@@ -375,7 +375,7 @@ int GCD(int x, int y)
 
 
 
-### 队列
+### --队列
 
 **1.Write the C function QueueSize( ) for a linked queue that returns the number of items in it.**
 
@@ -599,7 +599,7 @@ next[] = -1 0 0 0 1 2 1 1
 
 ## 第五章 数组和广义表
 
-### 数组
+### --数组
 
 **1.在一个大小为 n 的整型数组中 , 找出最大值最小值需要比较的次数是多少**
 
