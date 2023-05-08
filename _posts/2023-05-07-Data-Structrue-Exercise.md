@@ -733,7 +733,7 @@ void Query_CrossLinked(CrossList *SM, ElemType x)
 
 **1.Give the order of visiting the vertices of each of the following binarytrees under (a)preorder (b)inorder (c) postorder traversal.**
 
-![image-20230507160703602](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/202305072020165.png)
+![image-20230507160703602](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/img_post/202305072020165.png)
 
 
 
@@ -771,7 +771,7 @@ BTNode *CopyTree(BTNode *root, BTNode *newroot)
 
 **3.Write a function that will interchange all left and right subtrees in alinked binary tree.**
 
-![image-20230507161826138](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/202305072021074.png)
+![image-20230507161826138](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/img_post/202305072021074.png)
 
 ```C++
 //颠倒左右子树
@@ -802,7 +802,7 @@ void interchange(BTNode *root)
 再按双序遍历它的左子树,然后再一次访问这个结点,接下来按双序遍历它的右子树
 ```
 
-![image-20230507162402190](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/202305072021801.png)
+![image-20230507162402190](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/img_post/202305072021801.png)
 
 ```
 双序遍历结果：E B C C B D A A G G D F F E 
@@ -858,9 +858,9 @@ int getMaxWidth(BTNode *root)
 
 **6.Draw the threadedtree of the following binary tree in 1)preorder 2)inorder 3)postorder**
 
-![image-20230507163502513](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/202305072021144.png)
+![image-20230507163502513](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/img_post/202305072021144.png)
 
-![image-20230507163559461](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/202305072021166.png)
+![image-20230507163559461](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/img_post/202305072021166.png)
 
 
 
@@ -1013,7 +1013,7 @@ a:11	b:1010	c:100	d:01	e:1011	f:00
 需要增加额外的0概率的占位符,以确保每次都能将n个权重最小的节点放在一起
 ```
 
-![image-20230507185314001](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/202305072021677.png)
+![image-20230507185314001](https://raw.githubusercontent.com/Rorschachqaq/Rorschachqaq.github.io/master/img/img_post/202305072021677.png)
 $$
 L = 4*(2+2) + 3*(3+5) + 2*(8+7+9+23+11) + 1*30 = 186
 $$
